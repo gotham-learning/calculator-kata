@@ -8,7 +8,16 @@ export const multiply = (param1: number, param2: number): string => {
 }
 
 
-export const minus = (param1: number, param2: number): string => {
+export class minus {
+  param1: number
+  param2: number
 
-  return `${param1} - ${param2} = ${param1 - param2}`
+  constructor(param1: number, param2: number) {
+    this.param1 = param1
+    this.param2 = param2
+  }
+
+  displayExpression() {
+    return `${this.param1} - ${this.param2} = ${this.param1 - this.param2}`
+  }
 }

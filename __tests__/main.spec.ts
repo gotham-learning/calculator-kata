@@ -20,12 +20,10 @@ describe('Calculator', () => {
   });
   describe('#minus', () => {
     it('3-2 = 1', () => {
-      expect(minus(3, 2)).toBe('3 - 2 = 1')
+      const mminus = new minus(3, 2)
+      expect(mminus.displayExpression()).toBe('3 - 2 = 1')
     });
   });
-
-
-
 });
 
 
