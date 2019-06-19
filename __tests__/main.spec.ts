@@ -6,12 +6,12 @@ describe('#greets', () => {
   });
 });
 
-
 describe('Calculator', () => {
   describe('#plus', () => {
     it('1+1 = 2', () => {
       const plus = new calculator(1, 1)
       expect(plus.displayExpression('+')).toBe('1 + 1 = 2')
+      expect(plus.result).toBe(2)
     });
   });
   describe('#multiply', () => {

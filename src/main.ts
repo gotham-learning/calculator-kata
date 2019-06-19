@@ -45,6 +45,7 @@ export class plus {
 export class calculator {
   param1: number
   param2: number
+  result: number
 
   constructor(param1: number, param2: number) {
     this.param1 = param1
@@ -54,10 +55,13 @@ export class calculator {
   displayExpression(operator: string) {
     switch (operator) {
       case '+':
+        this.result = this.param1 + this.param2
         return `${this.param1} ${operator} ${this.param2} = ${this.param1 + this.param2}`
       case '-':
+        this.result = this.param1 - this.param2
         return `${this.param1} ${operator} ${this.param2} = ${this.param1 - this.param2}`
       case '*':
+        this.result = this.param1 * this.param2
         return `${this.param1} ${operator} ${this.param2} = ${this.param1 * this.param2}`
       default:
         return ''
