@@ -1,4 +1,4 @@
-import { greets, plus } from '../src/main';
+import { greets, plus, multiply } from '../src/main';
 
 describe('#greets', () => {
   it('greets the person', () => {
@@ -6,8 +6,20 @@ describe('#greets', () => {
   });
 });
 
-describe('#plus', () => {
-  it('1+1 = 2', () => {
-    expect(plus(1, 1)).toBe(2)
+
+describe('Calculator', () => {
+  describe('#plus', () => {
+    it('1+1 = 2', () => {
+      expect(plus(1, 1)).toBe(2)
+    });
   });
+  describe('#multiply', () => {
+    it('2*3 = 6', () => {
+      expect(multiply(2, 3)).toBe(6)
+    });
+  });
+
+
 });
+
+
