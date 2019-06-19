@@ -10,7 +10,7 @@ describe('#greets', () => {
 describe('Calculator', () => {
   describe('#plus', () => {
     it('1+1 = 2', () => {
-      expect(plus(1, 1)).toBe(2)
+      expect(plus(1, 1)).toBe('1 + 1 = 2')
     });
   });
   describe('#multiply', () => {
@@ -18,6 +18,7 @@ describe('Calculator', () => {
       expect(multiply(2, 3)).toBe(6)
     });
   });
+
 
 
 });
