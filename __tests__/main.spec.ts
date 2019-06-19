@@ -10,12 +10,14 @@ describe('#greets', () => {
 describe('Calculator', () => {
   describe('#plus', () => {
     it('1+1 = 2', () => {
-      expect(plus(1, 1)).toBe('1 + 1 = 2')
+      const pplus = new plus(1, 1)
+      expect(pplus.displayExpression()).toBe('1 + 1 = 2')
     });
   });
   describe('#multiply', () => {
     it('2*3 = 6', () => {
-      expect(multiply(2, 3)).toBe('2 x 3 = 6')
+      const mmultiply = new multiply(2, 3)
+      expect(mmultiply.displayExpression()).toBe('2 x 3 = 6')
     });
   });
   describe('#minus', () => {
