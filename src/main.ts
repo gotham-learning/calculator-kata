@@ -1,5 +1,3 @@
-export const greets = (name: string): string => `Hello, ${name}`
-
 export class minus {
   param1: number
   param2: number

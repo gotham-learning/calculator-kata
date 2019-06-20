@@ -1,10 +1,4 @@
-import { greets, calculator } from '../src/main';
-
-describe('#greets', () => {
-  it('greets the person', () => {
-    expect(greets('Noptoon')).toBe('Hello, Noptoon')
-  });
-});
+import { calculator } from '../src/main';
 
 describe('Calculator', () => {
   describe('#plus', () => {
