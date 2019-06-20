@@ -1,19 +1,22 @@
-export const plus = (left: number, right: number) => ({
-  op: '+',
-  left, right,
-  eval: () => left + right
-})
+type Operator = (left: number, right: number) => {
+  symbol: string,
+  left: number,
+  right: number,
+  compute: () => number
+}
+
+type Computation = (left: number, right: number) => number
+
+const operator = (symbol: string, computation: Computation): Operator =>
+  (left, right) => ({
+    symbol, left, right,
+    compute: () => computation(left, right)
+  })
 
 
-export const minus = (left: number, right: number) => ({
-  op: '-',
-  left, right,
-  eval: () => left - right
-})
+// operators definition
 
-
-export const multiply = (left: number, right: number) => ({
-  op: '×',
-  left, right,
-  eval: () => left * right
-})
+export const plus = operator('+', (l, r) => l + r)
+export const minus = operator('-', (l, r) => l - r)
+export const multiply = operator('×', (l, r) => l * r)
+export const divide = operator('÷', (l, r) => l / r)
