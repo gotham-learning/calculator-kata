@@ -2,7 +2,6 @@
  * This starter project recommended using Microsoft TSLint rules.
  * Please see https://github.com/Microsoft/tslint-microsoft-contrib for more details.
  */
-
 {
   "extends": [
     "tslint-microsoft-contrib/recommended",
@@ -20,7 +19,6 @@
     "typedef": [
       true,
       "parameter",
-      "arrow-parameter",
       "property-declaration",
       "member-variable-declaration"
     ]
